@@ -96,9 +96,10 @@ public class KMeansAvaliacao {
     }
 
     public void agrupamentoPorCentroides() {
-        double distancia = Double.MAX_VALUE;
-        int centroideEscolhido = 0;
         for (AvaliacaoEstudante individuo : individuos) {
+             double distancia = Double.MAX_VALUE;
+             int centroideEscolhido = 0;
+
             for (int i = 0; i < clusters.size(); i++) {
                 if (distanciaEuclidiana(clusters.get(i).getCentroide(), individuo) < distancia) {
                     distancia =  distanciaEuclidiana(clusters.get(i).getCentroide(), individuo);
@@ -159,8 +160,11 @@ public class KMeansAvaliacao {
     
     public void imprimirClusters(){
         for(Cluster cluster: clusters){
-            System.out.print(cluster.getId());
+            System.out.println("---------------------------------------------\n");
+            System.out.print("Cluster nº ["+cluster.getId()+"] contém :\n ");
             System.out.println("Número de indivíduos: "+ cluster.getPontos().size());
+            System.out.println("Centróide: \n"+ cluster.getCentroide().toString());
+            System.out.println("-----------------Fim Cluster----------------------\n");
         }
     }
     

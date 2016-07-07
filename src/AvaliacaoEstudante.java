@@ -75,7 +75,19 @@ int questionario[] = new int[28];
         this.questionario = questionario;
     }
     
-   
+@Override
+   public String toString(){
+      String saida =  "Instrutor: " + Instructor + 
+"        \nCurso: "+codigoCurso +
+"        \nQuantidade de Repetições da Disciplina: " + quantidadeRepeticaoDisciplina+
+"        \nFrequência do Estudante: " + codigoFrequencia+
+"        \nNível de Dificuldade da Disciplina: "+ nivelDificuldadeDisciplina;
+      
+      for(int i=0;i<questionario.length;i++)
+          saida = saida + "\n Resposta Questão["+(i+1)+"]: " + questionario[i]; 
+      
+      return saida;
+   }
     
 
 

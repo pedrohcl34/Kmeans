@@ -16,7 +16,7 @@ public class Main {
     public static void main(String args[]){
         try {
             KMeansAvaliacao kmeansAvaliacao = new KMeansAvaliacao(3);
-            System.out.println(kmeansAvaliacao.getIndividuos().size());
+            System.out.println("---------------------------Clusters-----------------------------------------");
             kmeansAvaliacao.kmeans();
             kmeansAvaliacao.imprimirClusters();
         } catch (FileNotFoundException ex) {
