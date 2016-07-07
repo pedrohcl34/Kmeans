@@ -7,7 +7,7 @@ public class Cluster {
     private int id;
     private List<AvaliacaoEstudante> dados;
     private AvaliacaoEstudante centroide;
-
+    private AvaliacaoEstudante centroideAntigo;
     public Cluster() {
     }
 
@@ -15,6 +15,7 @@ public class Cluster {
         this.id = id;
         this.dados = dados;
         this.centroide = centroid;
+        this.centroideAntigo = centroid;
     }
 
     public Cluster(int id) {
@@ -30,7 +31,15 @@ public class Cluster {
         this.id = id;
     }
 
-    public List getPontos() {
+    public AvaliacaoEstudante getCentroideAntigo() {
+        return centroideAntigo;
+    }
+
+    public void setCentroideAntigo(AvaliacaoEstudante centroideAntigo) {
+        this.centroideAntigo = centroideAntigo;
+    }
+
+    public List<AvaliacaoEstudante> getPontos() {
         return dados;
     }
 

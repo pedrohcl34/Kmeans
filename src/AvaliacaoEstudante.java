@@ -17,8 +17,7 @@ private int codigoCurso;
 private int quantidadeRepeticaoDisciplina;
 private int codigoFrequencia;
 private int nivelDificuldadeDisciplina;
-double questionario[] = new double[28];
-private int numero_cluster;
+int questionario[] = new int[28];
 
     public AvaliacaoEstudante(int Instructor, int codigoCurso, int quantidadeRepeticaoDisciplina, int codigoFrequencia, int nivelDificuldadeDisciplina) {
         this.Instructor = Instructor;
@@ -68,11 +67,11 @@ private int numero_cluster;
         this.nivelDificuldadeDisciplina = nivelDificuldadeDisciplina;
     }
 
-    public double[] getQuestionario() {
+    public int[] getQuestionario() {
         return questionario;
     }
 
-    public void setQuestionario(double[] questionario) {
+    public void setQuestionario(int[] questionario) {
         this.questionario = questionario;
     }
     
